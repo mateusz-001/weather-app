@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Simple weather app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/694ed6eb09.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400&family=Teko:wght@300&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="header__title">Simple weather app</h1>
+        </header>
+        <section class="app">
+            <div class="app__search">
+                <form class="form">
+                    <input class="search-input" type="text" placeholder="Search">
+                    <button class="search-button" type="submit" class="btn btn-primary">
+                        <i class="search-icon fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="app__city-info">
+                <p class="city-name">Warszawa, </p>
+                <p class="city-country">Poland</p>
+            </div>
+            <div class="app__temp">
+                <i class="weather-icon fas fa-cloud"></i>
+                <p class="temp-value">34</p>
+                <p class="temp-degrees">&deg; C</p>
+            </div>
+            <div class="app__others">
+                <p class="UV-info"></p>
+                <p class="humidity-info"></p>
+                <p class="wind-info"></p>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(../img/rain.jpg);
+  color: white;
+  font-size: 10px;
+  font-family: "barlow", sans-serif;
+}
+
+.wrapper {
+  height: 70%;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+}
+
+.header {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: auto;
+}
+
+.header__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.app {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__search {
+  width: 100%;
+  margin: 0 auto;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__search .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5vh;
+}
+
+.app__search .form .search-input {
+  min-height: 35px;
+  border-radius: 20px;
+  border: none;
+  margin: 5px;
+  background-color: #e6e4e4;
+}
+
+.app__search .form .search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: none;
+  margin: 5px;
+  background-color: rgba(0, 69, 153, 0.7);
+}
+
+.app__search .form .search-button .search-icon {
+  font-size: 1.2rem;
+  color: #bdbdbd;
+}
+/*# sourceMappingURL=style.css.map */
