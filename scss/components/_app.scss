@@ -175,7 +175,7 @@ body{
         }
     }
     &__others{
-        flex-basis: 85%;
+        flex-basis: 80%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -184,8 +184,8 @@ body{
         @media (min-width: 650px){
             flex-basis: 60%;
         }
-        @media (min-width: 120px){
-            flex-basis: 40%;
+        @media (min-width: 1024px){
+            flex-basis: 30%;
         }
         .pressure-info{
             flex-basis: 100%;
