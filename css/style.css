@@ -289,8 +289,8 @@ body {
 }
 
 .app__others {
-  -ms-flex-preferred-size: 65%;
-      flex-basis: 65%;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
