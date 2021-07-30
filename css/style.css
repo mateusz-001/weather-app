@@ -19,6 +19,18 @@ body {
   font-family: "barlow", sans-serif;
 }
 
+@media (orientation: landscape) {
+  body {
+    height: 150vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+}
+
 .wrapper {
   min-height: 75%;
   -ms-flex-preferred-size: 90%;
@@ -37,6 +49,20 @@ body {
   border-radius: 25px;
 }
 
+@media (min-width: 650px) {
+  .wrapper {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
+}
+
 .header {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -44,9 +70,30 @@ body {
   padding: 15px 0;
 }
 
+@media (min-width: 650px) {
+  .header {
+    height: 5%;
+    padding: 0 0;
+  }
+}
+
 .header__title {
+  font-family: "teko", sans-serif;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 650px) {
+  .header__title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    font-size: 5rem;
+  }
 }
 
 .app {
@@ -84,8 +131,15 @@ body {
   height: 5vh;
 }
 
+@media (min-width: 650px) {
+  .app__search .form {
+    height: 7vh;
+  }
+}
+
 .app__search .form .search-input {
   min-height: 35px;
+  min-width: 50px;
   border-radius: 20px;
   border: 3px solid transparent;
   margin: 5px;
@@ -93,6 +147,25 @@ body {
   background-color: #e6e4e4;
   -webkit-transition: .4s;
   transition: .4s;
+  font-size: 1.1rem;
+  font-family: "barlow", sans-serif;
+  font-weight: 600;
+}
+
+@media (min-width: 650px) {
+  .app__search .form .search-input {
+    min-height: 50px;
+    min-width: 350px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app__search .form .search-input {
+    min-height: 60px;
+    min-width: 500px;
+    font-size: 1.4rem;
+  }
 }
 
 .app__search .form .search-input:focus {
@@ -109,9 +182,32 @@ body {
   background-color: rgba(34, 125, 236, 0.9);
 }
 
+@media (min-width: 650px) {
+  .app__search .form .search-button {
+    height: 55px;
+    width: 55px;
+  }
+}
+
+@media (min-width: 650px) {
+  .app__search .form .search-button {
+    height: 65px;
+    width: 65px;
+  }
+}
+
 .app__search .form .search-button .search-icon {
   font-size: 1.2rem;
   color: #e6e4e4;
+  text-align: center;
+  line-height: 20px;
+}
+
+@media (min-width: 650px) {
+  .app__search .form .search-button .search-icon {
+    font-size: 1.6rem;
+    line-height: 27.5px;
+  }
 }
 
 .app__city-info {
@@ -125,11 +221,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 100;
 }
 
 .app__city-info .city-name {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 650px) {
+  .app__city-info .city-name {
+    font-size: 2.7rem;
+  }
 }
 
 .app__temp {
@@ -155,14 +258,34 @@ body {
   padding-right: 15px;
 }
 
+@media (min-width: 650px) {
+  .app__temp .weather-icon {
+    font-size: 5.5rem;
+  }
+}
+
 .app__temp .temp-value {
   font-size: 2.2rem;
   line-height: 2rem;
   padding-right: 10px;
+  font-weight: 600;
+}
+
+@media (min-width: 650px) {
+  .app__temp .temp-value {
+    font-size: 3.2rem;
+  }
 }
 
 .app__temp .temp-degrees {
+  font-weight: 600;
   font-size: 2rem;
+}
+
+@media (min-width: 650px) {
+  .app__temp .temp-degrees {
+    font-size: 3rem;
+  }
 }
 
 .app__others {
@@ -179,7 +302,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 5%;
+  margin: 5% 0;
+}
+
+@media (min-width: 650px) {
+  .app__others {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+}
+
+@media (min-width: 120px) {
+  .app__others {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
 }
 
 .app__others .pressure-info {
@@ -205,9 +342,22 @@ body {
   font-weight: bold;
 }
 
+@media (min-width: 650px) {
+  .app__others .pressure-info .info {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
 .app__others .pressure-info .info .value {
-  font-size: 1.1rem;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+@media (min-width: 650px) {
+  .app__others .pressure-info .info .value {
+    font-size: 1.7rem;
+  }
 }
 
 .app__others .pressure-info .pressure-icon {
@@ -220,6 +370,16 @@ body {
   border-radius: 50%;
   color: #e6e4e4;
   background-color: #64a5f0;
+}
+
+@media (min-width: 650px) {
+  .app__others .pressure-info .pressure-icon {
+    -ms-flex-preferred-size: 40px;
+        flex-basis: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+  }
 }
 
 .app__others .humidity-info {
@@ -244,9 +404,22 @@ body {
   font-weight: bold;
 }
 
+@media (min-width: 650px) {
+  .app__others .humidity-info .info {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
 .app__others .humidity-info .info .value {
-  font-size: 1.1rem;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+@media (min-width: 650px) {
+  .app__others .humidity-info .info .value {
+    font-size: 1.7rem;
+  }
 }
 
 .app__others .humidity-info .humidity-icon {
@@ -259,6 +432,16 @@ body {
   border-radius: 50%;
   color: #e6e4e4;
   background-color: #3e74b3;
+}
+
+@media (min-width: 650px) {
+  .app__others .humidity-info .humidity-icon {
+    -ms-flex-preferred-size: 40px;
+        flex-basis: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+  }
 }
 
 .app__others .wind-info {
@@ -283,9 +466,22 @@ body {
   font-weight: bold;
 }
 
+@media (min-width: 650px) {
+  .app__others .wind-info .info {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
 .app__others .wind-info .info .value {
-  font-size: 1.1rem;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+@media (min-width: 650px) {
+  .app__others .wind-info .info .value {
+    font-size: 1.7rem;
+  }
 }
 
 .app__others .wind-info .wind-icon {
@@ -298,5 +494,15 @@ body {
   border-radius: 50%;
   color: #e6e4e4;
   background-color: #225085;
+}
+
+@media (min-width: 650px) {
+  .app__others .wind-info .wind-icon {
+    -ms-flex-preferred-size: 40px;
+        flex-basis: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
