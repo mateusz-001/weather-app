@@ -17,7 +17,7 @@
         <header class="header">
             <h1 class="header__title">Simple weather app</h1>
         </header>
-        <section class="app">
+        <div class="app">
             <div class="app__search">
                 <form class="form">
                     <input class="search-input" type="text" placeholder="Search">
@@ -27,18 +27,26 @@
                 </form>
             </div>
             <div class="app__city-info">
-                <p class="city-name">Warszawa, </p>
-                <p class="city-country">Poland</p>
+                <p class="city-name">Warszawa, Poland</p>
             </div>
             <div class="app__temp">
                 <i class="weather-icon fas fa-cloud"></i>
                 <p class="temp-value">34</p>
-                <p class="temp-degrees">&deg; C</p>
+                <p class="temp-degrees">&deg;C</p>
             </div>
             <div class="app__others">
-                <p class="UV-info"></p>
-                <p class="humidity-info"></p>
-                <p class="wind-info"></p>
+                <div class="pressure-info">
+                    <i class="pressure-icon fas fa-compress-alt"></i>
+                    <p class="info pressure">Pressure: <span class="value">1000 hPa</span></p>
+                </div>
+                <div class="humidity-info">
+                    <i class="humidity-icon fas fa-tint"></i>
+                    <p class="info humidity">Humidity: <span class="value">20%</span></p>
+                </div>
+                <div class="wind-info">
+                    <i class="wind-icon fas fa-wind"></i>
+                    <p class="info wind">Wind: <span class="value">30 km/h</span></p>
+                </div>
             </div>
         </section>
     </div>
