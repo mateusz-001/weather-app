@@ -38,20 +38,27 @@ const showWeather = (data) => {
     windInfo.textContent = `${speed} km/h`;
 
     const weatherIcon = document.querySelector('.weather-icon');
+    const body = document.body;
     if(main === 'Clouds'){
         weatherIcon.innerHTML = '&#xf0c2';
-    }else if(main === 'Rain' && main === 'Drizzle'){
+        body.style.backgroundImage = 'url(img/clouds.jpg)';
+    }else if(main === 'Rain' || main === 'Drizzle'){
         weatherIcon.innerHTML = '&#xf740';
+        body.style.backgroundImage = 'url(img/rain.jpg)';
     }else if(main === 'Thunderstorm'){
         weatherIcon.innerHTML = '&#xf0e7';
+        body.style.backgroundImage = 'url(img/thunder.jpg)';
     }else if(main === 'Snow'){
         weatherIcon.innerHTML = '&#xf2dc';
-    }else if(main === 'Clear'){
+        body.style.backgroundImage = 'url(img/snow.jpg)';
+    }
+    else if(main === 'Clear'){
         weatherIcon.innerHTML = '&#xf185';
+        body.style.backgroundImage = 'url(img/sunny.png)';
     }else{
         weatherIcon.innerHTML = '&#xf75f';
+        body.style.backgroundImage = 'url(img/clouds.jpg)';
     }
-    
 }
 
 document.querySelector('.search-button').addEventListener('click',getCity);
