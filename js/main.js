@@ -1,4 +1,4 @@
-const getCity = e => {
+const getCity = (e) => {
     e.preventDefault();
 
     const city = document.querySelector('.search-input').value;
@@ -17,13 +17,16 @@ const showWeather = (data) => {
     const {pressure} = data.main;
     const {humidity} = data.main;
     const {speed} = data.wind;
+    const {main} = data.weather[0];
 
-    console.log(name,country,temp,pressure,humidity,speed);
     const cityName = document.querySelector('.city-name');
     cityName.textContent = `${name}, ${country}`;
 
     const temperature = document.querySelector('.temp-value');
     temperature.textContent = Math.floor(temp);
+
+    const description = document.querySelector('.description');
+    description.textContent = main;
 
     const pressureInfo = document.querySelector('.value-pressure');
     pressureInfo.textContent = `${pressure} hPa`;
@@ -32,7 +35,23 @@ const showWeather = (data) => {
     humidityInfo.textContent = `${humidity} %`;
 
     const windInfo = document.querySelector('.value-wind');
-    windInfo.textContent = `${speed} km/h`
+    windInfo.textContent = `${speed} km/h`;
+
+    const weatherIcon = document.querySelector('.weather-icon');
+    if(main === 'Clouds'){
+        weatherIcon.innerHTML = '&#xf0c2';
+    }else if(main === 'Rain' && main === 'Drizzle'){
+        weatherIcon.innerHTML = '&#xf740';
+    }else if(main === 'Thunderstorm'){
+        weatherIcon.innerHTML = '&#xf0e7';
+    }else if(main === 'Snow'){
+        weatherIcon.innerHTML = '&#xf2dc';
+    }else if(main === 'Clear'){
+        weatherIcon.innerHTML = '&#xf185';
+    }else{
+        weatherIcon.innerHTML = '&#xf75f';
+    }
+    
 }
 
 document.querySelector('.search-button').addEventListener('click',getCity);

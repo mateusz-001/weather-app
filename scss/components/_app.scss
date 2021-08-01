@@ -13,7 +13,7 @@ body{
     @media (orientation: landscape){
         height: 150vh;
     }
-    @media (min-width: 1024px){
+    @media (min-width: 650px){
         height: 100vh;
     }
 }
@@ -145,6 +145,7 @@ body{
     }
     &__temp{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         flex-basis: 90%;
@@ -173,6 +174,16 @@ body{
                 font-size: 3rem;
             }
         }
+        .description{
+            flex-basis: 100%;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 100;
+            line-height: 0;
+            @media (min-width: 650px){
+                font-size: 1.5rem;
+            }
+        }
     }
     &__others{
         flex-basis: 80%;
@@ -185,7 +196,8 @@ body{
             flex-basis: 60%;
         }
         @media (min-width: 1024px){
-            flex-basis: 30%;
+            flex-basis: 40%;
+            margin: 2.5% 0;
         }
         .pressure-info{
             flex-basis: 100%;
