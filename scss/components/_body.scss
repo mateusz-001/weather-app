@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(../img/sunny.png);
+    color: white;
+    font-size: 10px;
+    font-family: $font-default;
+    @media (orientation: landscape){
+        height: 200vh;
+    }
+    @media (min-width: 650px){
+        height: 100vh;
+    }
+    @media (min-width: 650px) and (orientation: landscape){
+        height: 250vh;
+    }
+    @media (min-width: 800px) and (orientation: landscape){
+        height: 120vh;
+    }
+    @media (min-width: 1024px) and (orientation: landscape){
+        height: 100vh;
+    }
+}

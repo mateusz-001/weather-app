@@ -7,8 +7,7 @@ const getCity = (e) => {
 
     fetch(url)
         .then((response) => response.json())
-        .then((data) => showWeather(data))
-        .catch(alert('Wrong city name')) 
+        .then((data) => showWeather(data)) 
 }
 
 const showWeather = (data) => {
@@ -23,8 +22,6 @@ const showWeather = (data) => {
     const cityName = document.querySelector('.city-name');
     if(country == undefined){
         cityName.textContent = name;
-    }else if(name === undefined){
-        cityName.textContent = "City name unknown"
     }else{ 
         cityName.textContent = `${name}, ${country}`;
     }

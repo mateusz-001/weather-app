@@ -1,0 +1,19 @@
+.wrapper{
+    min-height: 80%;
+    flex-basis: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    background-color: rgba(0,0,0,.9);
+    border-radius: 25px;
+    @media (orientation: landscape){
+        min-height: 50%;
+    }
+    @media (min-width: 650px){
+        flex-basis: 75%;
+    }
+    @media (min-width: 1024px){
+        flex-basis: 55%;
+    }
+}
