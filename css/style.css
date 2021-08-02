@@ -32,7 +32,7 @@ body {
 }
 
 .wrapper {
-  min-height: 75%;
+  min-height: 80%;
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
   display: -webkit-box;

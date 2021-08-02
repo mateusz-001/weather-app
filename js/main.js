@@ -7,7 +7,8 @@ const getCity = (e) => {
 
     fetch(url)
         .then((response) => response.json())
-        .then((data) => showWeather(data)) 
+        .then((data) => showWeather(data))
+        .catch(alert('Wrong city name')) 
 }
 
 const showWeather = (data) => {
@@ -20,10 +21,16 @@ const showWeather = (data) => {
     const {main} = data.weather[0];
 
     const cityName = document.querySelector('.city-name');
-    cityName.textContent = `${name}, ${country}`;
+    if(country == undefined){
+        cityName.textContent = name;
+    }else if(name === undefined){
+        cityName.textContent = "City name unknown"
+    }else{ 
+        cityName.textContent = `${name}, ${country}`;
+    }
 
     const temperature = document.querySelector('.temp-value');
-    temperature.textContent = Math.floor(temp);
+    temperature.textContent = Math.round(temp);
 
     const description = document.querySelector('.description');
     description.textContent = main;
@@ -35,7 +42,7 @@ const showWeather = (data) => {
     humidityInfo.textContent = `${humidity} %`;
 
     const windInfo = document.querySelector('.value-wind');
-    windInfo.textContent = `${speed} km/h`;
+    windInfo.textContent = `${Math.round(speed)} km/h`;
 
     const weatherIcon = document.querySelector('.weather-icon');
     const body = document.body;
